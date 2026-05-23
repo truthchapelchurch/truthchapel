@@ -1,0 +1,1032 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Truth Chapel Melbourne — Tamil Pentecostal Church</title>
+
+<meta name="description"
+content="Truth Chapel Melbourne is a Bible-centered Tamil Pentecostal church in Doveton serving Melbourne's south-east suburbs through worship, prayer, scripture teaching, and community fellowship.">
+
+<meta name="theme-color" content="#b18a4a">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Truth Chapel Melbourne">
+<meta property="og:description" content="A cinematic Bible-centered Tamil Pentecostal church in Melbourne.">
+<meta property="og:type" content="website">
+
+<meta property="og:image"
+content="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&q=80&w=1200">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+    ROOT
+===================================================== */
+
+:root {
+    --bg: #f8f5ef;
+    --surface: #ffffff;
+
+    --text-main: #0f1728;
+    --text-muted: #5f6b7a;
+
+    --gold: #d8b26a;
+    --gold-dark: #8f6827;
+    --gold-light: #fdfaf4;
+
+    --gold-gradient:
+        linear-gradient(
+            135deg,
+            #e2c27a 0%,
+            #b18438 45%,
+            #7c591f 100%
+        );
+
+    --shadow-soft:
+        0 20px 60px rgba(0,0,0,.08);
+
+    --shadow-deep:
+        0 40px 100px rgba(0,0,0,.45);
+
+    --transition:
+        all .6s cubic-bezier(.16,1,.3,1);
+}
+
+/* =====================================================
+    GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: -.03em;
+}
+
+p {
+    line-height: 1.8;
+    color: var(--text-muted);
+    font-size: 1.03rem;
+}
+
+/* =====================================================
+    FILM GRAIN
+===================================================== */
+
+.film-grain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: .035;
+    mix-blend-mode: soft-light;
+    background:
+        repeating-radial-gradient(
+            circle at center,
+            rgba(255,255,255,.04) 0,
+            rgba(255,255,255,.02) 1px,
+            transparent 2px,
+            transparent 3px
+        );
+}
+
+/* =====================================================
+    NAVBAR
+===================================================== */
+
+.navbar {
+    padding: 1rem 0;
+    background:
+        rgba(5,10,18,.78) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom:
+        1px solid rgba(255,255,255,.06);
+    z-index: 999;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-family: 'Cinzel', serif;
+    font-size: 1.55rem;
+    font-weight: 800;
+}
+
+.navbar-brand span {
+    color: var(--gold);
+}
+
+.navbar-nav .nav-link {
+    color:
+        rgba(255,255,255,.84);
+    font-weight: 600;
+    padding:
+        .6rem 1rem !important;
+    transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--gold);
+}
+
+.navbar-toggler {
+    border:
+        1px solid rgba(255,255,255,.15) !important;
+    padding:
+        .5rem .7rem;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1) brightness(2);
+}
+
+/* =====================================================
+    HERO
+===================================================== */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    padding:
+        12rem 0 8rem;
+    background:
+        linear-gradient(
+            rgba(5,8,14,.78),
+            rgba(5,8,14,.85)
+        ),
+        url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&q=80&w=1800');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    isolation: isolate;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,.02) 0%,
+            rgba(0,0,0,.62) 76%
+        );
+    z-index: 1;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    inset: -20%;
+    background:
+        linear-gradient(
+            115deg,
+            transparent 30%,
+            rgba(255,214,120,.08) 45%,
+            rgba(255,214,120,.16) 50%,
+            rgba(255,214,120,.08) 55%,
+            transparent 70%
+        );
+    filter: blur(30px);
+    animation:
+        holyLight 10s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+.holy-fog {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255,220,140,.12),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255,200,100,.08),
+            transparent 45%
+        );
+    filter: blur(60px);
+    animation:
+        fogMove 16s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+.hero-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-particles span {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background:
+        rgba(255,235,180,.45);
+    box-shadow:
+        0 0 10px rgba(255,220,120,.4);
+    animation:
+        floatDust linear infinite;
+}
+
+.hero-particles span:nth-child(1) { left: 10%; animation-duration: 18s; animation-delay: -2s; }
+.hero-particles span:nth-child(2) { left: 25%; animation-duration: 22s; animation-delay: -7s; }
+.hero-particles span:nth-child(3) { left: 40%; animation-duration: 20s; animation-delay: -5s; }
+.hero-particles span:nth-child(4) { left: 58%; animation-duration: 24s; animation-delay: -9s; }
+.hero-particles span:nth-child(5) { left: 72%; animation-duration: 17s; animation-delay: -4s; }
+.hero-particles span:nth-child(6) { left: 88%; animation-duration: 26s; animation-delay: -7s; }
+
+.hero-section .container {
+    position: relative;
+    z-index: 5;
+}
+
+/* =====================================================
+    HERO TEXT
+===================================================== */
+
+.badge-tag {
+    display: inline-flex;
+    padding:
+        .8rem 1.5rem;
+    border-radius: 100px;
+    background:
+        rgba(255,255,255,.06);
+    border:
+        1px solid rgba(255,255,255,.08);
+    color: #f7e3b1;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    color: #fff;
+    font-size:
+        clamp(2.8rem,5vw,5.2rem);
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    text-shadow:
+        0 3px 20px rgba(0,0,0,.5),
+        0 0 40px rgba(255,215,120,.06);
+}
+
+.hero-text {
+    color:
+        rgba(255,255,255,.92);
+    text-shadow:
+        0 2px 10px rgba(0,0,0,.6);
+    max-width: 650px;
+    margin-bottom: 2rem;
+}
+
+/* =====================================================
+    BUTTONS
+===================================================== */
+
+.btn-custom {
+    padding:
+        1rem 2.2rem;
+    border-radius: 14px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.btn-primary-gold {
+    position: relative;
+    overflow: hidden;
+    background:
+        var(--gold-gradient);
+    color: #fff !important;
+    border:
+        1px solid rgba(255,255,255,.08);
+    box-shadow:
+        0 12px 30px rgba(214,179,106,.25),
+        inset 0 1px 0 rgba(255,255,255,.2);
+}
+
+.btn-primary-gold::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,.25),
+            transparent
+        );
+    transform:
+        translateX(-120%);
+    transition: .8s;
+}
+
+.btn-primary-gold:hover::before {
+    transform: translateX(120%);
+}
+
+.btn-primary-gold:hover {
+    transform:
+        translateY(-5px);
+    box-shadow:
+        0 20px 40px rgba(214,179,106,.45);
+}
+
+.btn-secondary-outline {
+    border:
+        1px solid rgba(255,255,255,.16);
+    color: #fff !important;
+    background:
+        rgba(255,255,255,.04);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-secondary-outline:hover {
+    background:
+        rgba(255,255,255,.08);
+    transform:
+        translateY(-5px);
+}
+
+/* =====================================================
+    IMAGE FRAME & MAP CONTAINER
+===================================================== */
+
+.graphic-frame-premium {
+    position: relative;
+    overflow: hidden;
+    border-radius: 34px;
+    border:
+        1px solid rgba(255,255,255,.08);
+    background: #000;
+    box-shadow:
+        var(--shadow-deep);
+    transform:
+        perspective(1400px)
+        rotateY(-4deg);
+    transition:
+        var(--transition);
+}
+
+.graphic-frame-premium:hover {
+    transform:
+        perspective(1400px)
+        rotateY(0deg)
+        translateY(-6px);
+}
+
+.graphic-frame-premium::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,.02),
+            rgba(0,0,0,.6)
+        );
+    pointer-events: none;
+}
+
+.graphic-frame-premium img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter:
+        brightness(.88)
+        contrast(1.05)
+        sepia(10%)
+        saturate(.95);
+    transition:
+        transform 1.5s ease;
+}
+
+.graphic-frame-premium:hover img {
+    transform: scale(1.06);
+}
+
+.map-embed-wrapper {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(0.2) contrast(1.05);
+}
+
+/* =====================================================
+    VERSE
+===================================================== */
+
+.verse-overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 5;
+    max-width: 320px;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    line-height: 1.7;
+    text-shadow:
+        0 2px 10px rgba(0,0,0,.8);
+}
+
+.verse-overlay span {
+    display: block;
+    margin-top: 10px;
+    color: #f3d392;
+    font-size: .8rem;
+    letter-spacing: .1em;
+}
+
+/* =====================================================
+    GLASS CARD
+==================================================== */
+
+.hero-card-premium {
+    background:
+        rgba(255,255,255,.06);
+    border:
+        1px solid rgba(255,255,255,.08);
+    border-radius: 30px;
+    padding: 2.5rem;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow:
+        0 30px 60px rgba(0,0,0,.3);
+    color: #fff;
+}
+
+.hero-card-premium p,
+.hero-card-premium .small {
+    color:
+        rgba(255,255,255,.76) !important;
+}
+
+/* =====================================================
+    SECTION
+===================================================== */
+
+.section-block {
+    padding: 7rem 0;
+}
+
+.section-heading {
+    font-size:
+        clamp(2rem,4vw,3rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.section-copy {
+    max-width: 760px;
+    margin:
+        auto auto 4rem;
+}
+
+/* =====================================================
+    DIVIDER
+===================================================== */
+
+.section-divider {
+    width: 100%;
+    height: 120px;
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(202,162,93,.04),
+            transparent
+        );
+}
+
+/* =====================================================
+    CARDS & CONTACT WRAPPERS
+===================================================== */
+
+.card-premium-grid {
+    background: #fff;
+    border-radius: 24px;
+    padding: 2.5rem;
+    border:
+        1px solid rgba(0,0,0,.05);
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.04);
+    height: 100%;
+    transition:
+        var(--transition);
+}
+
+.card-premium-grid:hover {
+    transform:
+        translateY(-10px);
+    border-color:
+        rgba(202,162,93,.25);
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.08),
+        0 0 30px rgba(202,162,93,.08);
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    background:
+        #f8f1e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Contact Detail Layout Card */
+.contact-detail-card {
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+}
+
+.contact-meta-item {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.contact-meta-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-meta-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--gold-light);
+    color: var(--gold-dark);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.contact-meta-text h5 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+}
+
+.contact-meta-text p, .contact-meta-text a {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    margin-bottom: 0;
+}
+.contact-meta-text a:hover {
+    color: var(--gold-dark);
+}
+
+.pastor-profile-box {
+    background: var(--gold-light);
+    border-left: 4px solid var(--gold);
+    padding: 1.5rem;
+    border-radius: 0 16px 16px 0;
+}
+
+.pastor-grid-item {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+}
+.pastor-grid-item:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+/* =====================================================
+    ANIMATIONS
+===================================================== */
+
+.fade-up {
+    opacity: 0;
+    transform:
+        translateY(40px);
+    animation:
+        fadeUp 1.2s ease forwards;
+}
+
+.fade-delay-1 { animation-delay: .2s; }
+.fade-delay-2 { animation-delay: .5s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+}
+
+@keyframes holyLight {
+    0% { transform: translateX(-4%) rotate(0deg); opacity: .7; }
+    100% { transform: translateX(4%) rotate(2deg); opacity: 1; }
+}
+
+@keyframes floatDust {
+    0% { transform: translateY(100vh) scale(.6); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1.3); opacity: 0; }
+}
+
+@keyframes fogMove {
+    0% { transform: translateX(-20px) translateY(-10px); }
+    100% { transform: translateX(20px) translateY(10px); }
+}
+
+/* =====================================================
+    SCROLL REVEAL
+===================================================== */
+
+.reveal-init {
+    opacity: 0;
+    transform:
+        translateY(60px);
+    transition:
+        1.2s cubic-bezier(.16,1,.3,1);
+}
+
+.revealed {
+    opacity: 1;
+    transform:
+        translateY(0);
+}
+
+/* =====================================================
+    FOOTER
+===================================================== */
+
+.footer-premium {
+    background:
+        #050a12;
+    color: #fff;
+    padding:
+        5rem 0 3rem;
+    position: relative;
+}
+
+.footer-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform:
+        translateX(-50%);
+    width: 120px;
+    height: 1px;
+    background:
+        var(--gold);
+}
+
+.footer-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-divider {
+    border-top:
+        1px solid rgba(255,255,255,.08);
+    margin:
+        3rem 0 2rem;
+}
+
+/* =====================================================
+    RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+    .hero-section { padding: 10rem 0 5rem; }
+    .graphic-frame-premium { transform: none !important; }
+    .hero-card-premium { margin-top: 2rem; }
+    .contact-map-row { flex-direction: column-reverse; }
+}
+
+@media (max-width: 576px) {
+    .btn-custom { width: 100%; }
+    .hero-card-premium { padding: 1.5rem; }
+    .verse-overlay { max-width: 240px; font-size: .9rem; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FILM GRAIN -->
+<div class="film-grain"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand" href="#">
+TRUTH <span>CHAPEL</span>
+</a>
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#mainNavbar"
+aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNavbar">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+<li class="nav-item"><a class="nav-link" href="#visit">Visit & Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<header class="hero-section">
+<div class="holy-fog"></div>
+<div class="hero-particles">
+<span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+<div class="container">
+<div class="row align-items-center g-5">
+<!-- LEFT -->
+<div class="col-lg-6">
+<div class="badge-tag fade-up">Tamil Pentecostal Church • Melbourne</div>
+<h1 class="hero-title fade-up fade-delay-1">A Church Built On The Living Word.</h1>
+<p class="hero-text fade-up fade-delay-2">
+Truth Chapel Melbourne is a Bible-centered Tamil Pentecostal fellowship serving Melbourne’s south-east through scripture teaching, prayer ministry, authentic worship, and spiritual community.
+</p>
+<div class="d-flex flex-wrap gap-3 fade-up fade-delay-2">
+<a href="#visit" class="btn btn-custom btn-primary-gold">Plan Your Visit</a>
+<a href="https://wa.me/61411330993" target="_blank" class="btn btn-custom btn-secondary-outline">Connect via WhatsApp</a>
+</div>
+</div>
+<!-- RIGHT -->
+<div class="col-lg-6">
+<div class="graphic-frame-premium reveal-init mb-4" style="height: 420px;">
+<img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&q=80&w=1200" alt="Cinematic holy bible reading">
+<div class="verse-overlay">
+“Your word is a lamp to my feet and a light to my path.”
+<span>PSALM 119:105</span>
+</div>
+</div>
+<div class="hero-card-premium reveal-init">
+<h4 style="color:#f3d392;" class="mb-4">Weekly Gathering Rhythms</h4>
+<div class="mb-4">
+<p class="fw-bold mb-1">Sunday Worship Service</p>
+<p class="small mb-1">4:00 PM – 6:00 PM</p>
+<p class="small">Tamil worship, biblical preaching, prayer, and fellowship.</p>
+</div>
+<div>
+<p class="fw-bold mb-1">Wednesday Prayer Meeting</p>
+<p class="small mb-1">7:00 PM – 8:30 PM</p>
+<p class="small">Midweek intercession and scripture meditation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<div class="section-divider"></div>
+
+<!-- ABOUT -->
+<section id="about" class="section-block">
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading">Anchored In Scripture</h2>
+<p class="section-copy">
+Truth Chapel provides a Christ-centered Tamil fellowship for families, students, migrants, and believers seeking authentic biblical community in Melbourne.
+</p>
+</div>
+<div class="row g-4">
+<div class="col-md-4">
+<div class="card-premium-grid reveal-init">
+<div class="icon-wrapper">🕊️</div>
+<h3>Spirit-Filled Worship</h3>
+<p>Authentic Tamil Pentecostal worship centered around praise, prayer, and devotion.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card-premium-grid reveal-init">
+<div class="icon-wrapper">📖</div>
+<h3>Bible Exposition</h3>
+<p>Deep scripture-centered preaching rooted completely in the authority of God’s Word.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card-premium-grid reveal-init">
+<div class="icon-wrapper">🙏</div>
+<h3>Prayer Ministry</h3>
+<p>Intentional prayer gatherings for healing, encouragement, spiritual growth, and restoration.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SERVICES -->
+<section id="services" class="section-block" style="background:#faf8f5;">
+<div class="container">
+<div class="row align-items-center g-5">
+<div class="col-lg-6">
+<div class="graphic-frame-premium reveal-init" style="height:460px;">
+<img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&q=80&w=1200" alt="Church worship gathering">
+</div>
+</div>
+<div class="col-lg-6">
+<h2 class="section-heading">Gatherings Built Around Prayer</h2>
+<p class="mb-4">Every gathering is intentionally structured around worship, biblical teaching, communion, and Spirit-led intercession.</p>
+<div class="row g-3">
+<div class="col-sm-6">
+<div class="p-4 rounded-4 h-100" style="background:#fff; box-shadow:0 10px 30px rgba(0,0,0,.04);">
+<h4 class="h5">Sunday Worship</h4>
+<p class="small mb-0">Praise, preaching, communion, and fellowship every Sunday evening from 4:00 PM – 6:00 PM.</p>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="p-4 rounded-4 h-100" style="background:#fff; box-shadow:0 10px 30px rgba(0,0,0,.04);">
+<h4 class="h5">Midweek Prayer</h4>
+<p class="small mb-0">Dedicated prayer and scripture reflection every Wednesday evening from 7:00 PM – 8:30 PM.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- VISIT, LOCATION & MAP SECTION -->
+<section id="visit" class="section-block">
+<div class="container">
+<div class="text-center">
+<h2 class="section-heading">Join Our Assembly This Week</h2>
+<p class="section-copy">
+Whether you are a student, new migrant, or living long-term in the South-East Suburbs, our doors are wide open. Find our details below to coordinate your visit.
+</p>
+</div>
+
+<div class="row g-5 contact-map-row">
+<!-- LEFT Column: Information & Contact Details -->
+<div class="col-lg-6">
+<div class="contact-detail-card p-4 p-md-5 reveal-init">
+<h3 class="mb-4" style="font-weight:700; font-family:'Cinzel', serif;">Contact Details</h3>
+
+<!-- Location Detail -->
+<div class="contact-meta-item">
+<div class="contact-meta-icon">📍</div>
+<div class="contact-meta-text">
+<h5>Church Location</h5>
+<p style="font-weight: 500;">
+4/21 Green Street,<br>
+Doveton VIC 3177,<br>
+Melbourne, Australia
+</p>
+</div>
+</div>
+
+<!-- Email Detail -->
+<div class="contact-meta-item">
+<div class="contact-meta-icon">✉️</div>
+<div class="contact-meta-text">
+<h5>Email Address</h5>
+<p><a href="mailto:info@truthchapel.com.au">info@truthchapel.com.au</a></p>
+</div>
+</div>
+
+<hr class="my-4" style="opacity: 0.08;">
+
+<!-- Contact Person / Pastoral Care -->
+<div class="pastor-profile-box">
+<h4 class="h6 text-uppercase fw-bold mb-3" style="letter-spacing: 0.05em; color: var(--gold-dark); font-family:'Plus Jakarta Sans', sans-serif;">Pastoral Connections</h4>
+
+<!-- Ranjan -->
+<div class="pastor-grid-item">
+<p class="fw-bold mb-0 text-dark" style="font-size:1.05rem;">Brother Ranjan</p>
+<p class="mb-1"><a href="tel:+61411330993" class="text-muted small fw-semibold">+61 411 330 993</a></p>
+</div>
+<!-- Anton -->
+<div class="pastor-grid-item">
+<p class="fw-bold mb-0 text-dark" style="font-size:1.05rem;">Brother Anton</p>
+<p class="mb-0"><a href="tel:+61421895526" class="text-muted small fw-semibold">+61 421 895 526</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- RIGHT Column: Map Box -->
+<div class="col-lg-6">
+<!-- Map block re-utilizes your clean perspective hover premium wrap -->
+<div class="graphic-frame-premium reveal-init h-100" style="min-height: 440px;">
+<iframe 
+class="map-embed-wrapper"
+src="https://maps.google.com/maps?q=4/21%20Green%20Street,%20Doveton%20VIC%203177,%20Australia&t=&z=15&ie=UTF-8&iwloc=&output=embed" 
+allowfullscreen="" 
+loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-premium">
+<div class="container text-center">
+<h4 class="footer-title">TRUTH CHAPEL MELBOURNE</h4>
+<p class="mx-auto" style="max-width:600px;color:#8c98aa;">
+A Bible-centered Tamil Pentecostal church serving Melbourne’s south-east through worship, scripture teaching, prayer ministry, and Christian fellowship.
+</p>
+<div class="footer-divider"></div>
+<p class="small mb-0" style="color:#7b8695;">
+© 2026 Truth Chapel Melbourne. All Rights Reserved.
+</p>
+</div>
+</footer>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Reveal Animation -->
+<script>
+const revealElements = document.querySelectorAll('.reveal-init');
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting) {
+entry.target.classList.add('revealed');
+}
+});
+}, {
+threshold: 0.15
+});
+
+revealElements.forEach(el => {
+observer.observe(el);
+});
+</script>
+
+</body>
+</html>
